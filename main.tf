@@ -1,11 +1,11 @@
 provider "aws" {
   region = "us-east-1"
 }
-resource "aws_instance" "instance_1" {
+resource "aws_instance" "instance_15" {
   ami             = "ami-0715c1897453cabd1" # Ubuntu 20.04 LTS // us-east-1
   instance_type   = "t2.micro"
   tags = {
-    Name = "Instance 1"
+    Name = "Instance 15"
   }
   security_groups = [aws_security_group.instances.name]
   user_data       = <<-EOF
@@ -14,11 +14,11 @@ resource "aws_instance" "instance_1" {
               python3 -m http.server 8080 &
               EOF
 }
-resource "aws_instance" "instance_2" {
+resource "aws_instance" "instance_25" {
   ami             = "ami-0715c1897453cabd1" # Ubuntu 20.04 LTS // us-east-1
   instance_type   = "t2.micro"
   tags = {
-    Name = "Instance 2"
+    Name = "Instance 25"
   }
   security_groups = [aws_security_group.instances.name]
   user_data       = <<-EOF
